@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+        }
+        
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            /* UI가 잘 보이지 않으면 contain으로, 꽉 채우려면 cover로 설정하세요 */
+            object-fit: contain; 
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <video id="myVideo" controls playsinline loop>
+        <source src="jeasu.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        // 별도의 스크립트 없이 HTML 설정만으로도 작동합니다.
+        // 사용자가 중앙의 재생 아이콘이나 하단 바의 재생 버튼을 누르면 
+        // 소리와 함께 영상이 시작됩니다.
+    </script>
+
+</body>
+</html>
